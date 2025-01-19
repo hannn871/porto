@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Farhan Nurrohman</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .mobile-menu { display: none; }
+        @media (max-width: 768px) { .mobile-menu { display: block; } }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="flex justify-between items-center p-4 bg-gray-200">
+        <div class="text-lg font-semibold">Farhan Nurrohman</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-600" href="index.html">Home</a>
+            <a class="hover:text-gray-600" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-600" href="about.html">Tentang Saya</a>
+            <a class="hover:text-gray-600" href="contact.html">Hubungi Saya</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-200">
+        <a class="hover:text-gray-600 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-600 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-600 p-2" href="about.html">Tentang Saya</a>
+        <a class="hover:text-gray-600 p-2" href="contact.html">Hubungi Saya</a>
+    </nav>
+    <main class="p-8">
+        <h1 class="text-3xl font-bold">Tentang Saya</h1>
+        <img src="farhan.jpg" alt="Profil M Ikhsan Syabani" class="rounded-full w-32 h-32 mt-4 mx-auto">
+        <p class="mt-4 text-gray-700 text-center">Saya adalah mahasiswa S1 Sistem Informasi Universitas Kuningan yang tertarik dengan pengembangan WEB.</p>
+        <h2 class="text-2xl font-semibold mt-6">Pendidikan</h2>
+        <p class="mt-2 text-gray-700">Universitas Kuningan, S1 Sistem Informasi, 2023 - Sekarang</p>
+        <h2 class="text-2xl font-semibold mt-6">Keterampilan</h2>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+            <li>Pengembangan WEB</li>
+            <li>Arduino dan IoT</li>
+        </ul>
+        <h2 class="text-2xl font-semibold mt-6">Tujuan Karier</h2>
+        <p class="mt-2 text-gray-700">Saya ingin menjadi programmer Front-End di masa depan.</p>
+    </main>
+    <footer class="flex justify-end p-4 bg-gray-200">
+        <p>&copy; 2025 Farhan Nurrohman. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
