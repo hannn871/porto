@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya dan Proyek Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .mobile-menu { display: none; }
+        @media (max-width: 768px) { .mobile-menu { display: block; } }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="flex justify-between items-center p-4 bg-gray-200">
+        <div class="text-lg font-semibold">Farhan Nurrohman</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-600" href="index.html">Home</a>
+            <a class="hover:text-gray-600" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-600" href="about.html">Tentang Saya</a>
+            <a class="hover:text-gray-600" href="contact.html">Hubungi Saya</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-200">
+        <a class="hover:text-gray-600 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-600 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-600 p-2" href="about.html">Tentang Saya</a>
+        <a class="hover:text-gray-600 p-2" href="contact.html">Hubungi Saya</a>
+    </nav>
+    <main class="p-8">
+        <h1 class="text-3xl font-bold mb-6">Karya dan Proyek Saya</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="sensor_gerak.jpg" alt="sensor" class="w-full h-auto rounded-lg">
+                <h2 class="text-xl font-semibold mt-2">Pembuatan Sensor Gerak</h2>
+                <p class="text-gray-700">Pembuatan sensor ini adalah untuk mencegah kemalingan dan tugas projek matkul Jaringan Komputer.</p>    
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="dicoding.png" alt="Bootcamp dicoding" class="w-full h-auto rounded-lg">
+                <h2 class="text-xl font-semibold mt-2">Bootcamp Dicoding</h2>
+                <p class="text-gray-700">Mengikuti bootcamp dicoding Belajar Membuat Front-End Web Untuk Pemula IDCamp 2024.</p>    
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="dicoding1.png" alt="Bootcamp dicoding" class="w-full h-auto rounded-lg">
+                <h2 class="text-xl font-semibold mt-2">Bootcamp Dicoding</h2>
+                <p class="text-gray-700">Mengikuti bootcamp dicoding Belajar Dasar Pemrograman JavaScript IDCamp 2024..</p>    
+            </div>
+        </div>
+    </main>
+    <footer class="flex justify-end p-4 bg-gray-200">
+        <p>&copy; Farhan Nurrohman. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>

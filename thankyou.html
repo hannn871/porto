@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terima Kasih atas Pesan Anda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        .mobile-menu { display: none; }
+        @media (max-width: 768px) { .mobile-menu { display: block; } }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="flex justify-between items-center p-4 bg-gray-200">
+        <div class="text-lg font-semibold">Farhan Nurrohman</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-600" href="index.html">Home</a>
+            <a class="hover:text-gray-600" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-600" href="about.html">Tentang Saya</a>
+            <a class="hover:text-gray-600" href="contact.html">Hubungi Saya</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-200">
+        <a class="hover:text-gray-600 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-600 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-600 p-2" href="about.html">Tentang Saya</a>
+        <a class="hover:text-gray-600 p-2" href="contact.html">Hubungi Saya</a>
+    </nav>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-3xl text-2xl mb-4 font-medium text-gray-800">
+                    Terima Kasih telah menghubungi kami
+                </h1>
+                <p class="mb-8 leading-relaxed text-gray-600">
+                    Silakan periksa email Anda dalam 24 jam, kami akan mengirimkan balasan secepat mungkin. Terima kasih!
+                </p>
+                <div class="flex justify-center">
+                    <a href="index.html" class="inline-flex text-white bg-gray-600 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 rounded text-lg">
+                        Kembali
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex justify-end p-4 bg-gray-200">
+        <p>&copy; 2025 Farhan Nurrohman. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
